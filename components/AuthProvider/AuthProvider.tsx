@@ -21,11 +21,9 @@ const AuthProvider = ({ children }: Props) => {
           if (user) setUser(user);
         } else {
           clearIsAuthenticated();
-          router.replace('/sign-in');
         }
       } catch {
         clearIsAuthenticated();
-        router.replace('/sign-in');
       } finally {
         setLoading(false);
       }
